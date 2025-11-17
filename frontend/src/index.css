@@ -1,0 +1,189 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+:root {
+  --bg-gradient-start: #e6f3ff;
+  --bg-gradient-end: #d9ecff;
+}
+
+body {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(142, 197, 255, 0.1),
+    rgba(102, 178, 255, 0.2)
+  );
+  color: #111827;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+}
+
+.bg-app {
+  background-image: linear-gradient(
+    180deg,
+    #f8fafc 0%,
+    #ffffff 35%,
+    rgba(142, 197, 255, 0.2) 100%
+  );
+}
+
+/* Minimalist card */
+.card {
+  background-color: rgba(255, 255, 255, 0.7);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  padding: 1.5rem;
+}
+
+.header-brand {
+  color: #0b2340;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.nav-link {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #4b5563;
+  transition: color 0.2s ease;
+}
+
+.nav-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(142, 197, 255, 0.25), rgba(102, 178, 255, 0.5));
+  color: #12355b;
+  font-weight: 600;
+  border: 1px solid rgba(142, 197, 255, 0.4);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.nav-button:hover {
+  box-shadow: 0 6px 18px rgba(13, 64, 104, 0.15);
+  transform: translateY(-1px);
+}
+
+.nav-button-active {
+  background: linear-gradient(135deg, rgba(102, 178, 255, 0.9), rgba(11, 35, 64, 0.9));
+  color: #fff;
+}
+
+.btn-primary {
+  background-color: #0b2340;
+  color: #fff;
+  padding: 0.6rem 1.25rem;
+  border-radius: 0.75rem;
+  transition: opacity 0.2s ease;
+}
+
+.input-field {
+  width: 100%;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  padding: 0.6rem 0.9rem;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.input-field-large {
+  padding: 0.8rem 1.1rem;
+  font-size: 1rem;
+  border-radius: 1rem;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border-radius: 9999px;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 0.25rem 0.9rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #4b5563;
+}
+
+.priority-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem 1rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.priority-pill:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 12px rgba(15, 23, 42, 0.2);
+}
+
+.priority-pill.active {
+  border: 1px solid rgba(9, 9, 11, 0.1);
+}
+
+.priority-low {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.3), rgba(52, 211, 153, 0.7));
+  color: #064e3b;
+}
+
+.priority-medium {
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.4), rgba(252, 211, 77, 0.8));
+  color: #7c2d12;
+}
+
+.priority-high {
+  background: linear-gradient(135deg, rgba(248, 113, 113, 0.4), rgba(239, 68, 68, 0.85));
+  color: #7f1d1d;
+}
+
+.days-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.2rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(14, 165, 233, 0.5));
+  color: #0f172a;
+}
+
+.days-pill-warning {
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.25), rgba(245, 158, 11, 0.6));
+  color: #78350f;
+}
+
+.days-pill-overdue {
+  background: linear-gradient(135deg, rgba(248, 113, 113, 0.3), rgba(239, 68, 68, 0.8));
+  color: #7f1d1d;
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.loader {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 4px solid #8ec5ff;
+  border-top-color: transparent;
+  border-radius: 9999px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
