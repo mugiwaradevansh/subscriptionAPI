@@ -188,6 +188,6 @@ Manual verification checklist:
 
 ---
 
-Made with calm focus and way too much coffee. ☕  
+Made with calm focus 
 Questions, feedback, or feature requests? **Open an issue** – I’d love to collaborate!  
 
